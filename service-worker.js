@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/ymphoto/precache-manifest.9b37b8aa922269c3fb18ce5ec3201558.js"
+  "/ymphoto/precache-manifest.e3dcc411f3db43b66a5d324426ad8a8e.js"
 );
 
 workbox.clientsClaim();
