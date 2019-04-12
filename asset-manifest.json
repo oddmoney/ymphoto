@@ -1,13 +1,13 @@
 {
   "main.css": "/ymphoto/static/css/main.1c9ddb54.chunk.css",
-  "main.js": "/ymphoto/static/js/main.19794141.chunk.js",
-  "main.js.map": "/ymphoto/static/js/main.19794141.chunk.js.map",
+  "main.js": "/ymphoto/static/js/main.811a6c4c.chunk.js",
+  "main.js.map": "/ymphoto/static/js/main.811a6c4c.chunk.js.map",
   "runtime~main.js": "/ymphoto/static/js/runtime~main.1fe6c2fa.js",
   "runtime~main.js.map": "/ymphoto/static/js/runtime~main.1fe6c2fa.js.map",
   "static/js/2.1f33cb5f.chunk.js": "/ymphoto/static/js/2.1f33cb5f.chunk.js",
   "static/js/2.1f33cb5f.chunk.js.map": "/ymphoto/static/js/2.1f33cb5f.chunk.js.map",
   "index.html": "/ymphoto/index.html",
-  "precache-manifest.4a9bbc8b7ad3aaa509e0acd59666c8f4.js": "/ymphoto/precache-manifest.4a9bbc8b7ad3aaa509e0acd59666c8f4.js",
+  "precache-manifest.9b37b8aa922269c3fb18ce5ec3201558.js": "/ymphoto/precache-manifest.9b37b8aa922269c3fb18ce5ec3201558.js",
   "service-worker.js": "/ymphoto/service-worker.js",
   "static/css/main.1c9ddb54.chunk.css.map": "/ymphoto/static/css/main.1c9ddb54.chunk.css.map"
 }
