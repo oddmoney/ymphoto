@@ -28,7 +28,7 @@ class App extends Component {
     });    
   }
   _callPhotoApi = () => {  
-    fetch("http://localhost:8080/rest/photoList.do", {
+    fetch("http://oddmoney.iptime.org:3588/rest/photoList.do", {
       credentials: 'include',  
       method: 'post',
       headers: {
