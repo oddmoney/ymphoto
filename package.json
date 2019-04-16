@@ -27,6 +27,7 @@
     "not op_mini all"
   ],
   "devDependencies": {
+    "@babel/core": "^7.4.3",
     "gh-pages": "^2.0.1"
   }
 }

@@ -25,10 +25,14 @@
 }
 .TourList .TourList_Genres {
   display: flex;
+  flex-wrap: wrap;  
+}
+.TourList .TourList_Genres_last {
+  display: flex;
   flex-wrap: wrap;
   margin-bottom: 20px;
 }
-.TourList_Genres .TourList_Genre {
+.TourList .TourList_Genre {  
   margin-right: 10px;
   color:#B4B5BD;
 }

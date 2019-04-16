@@ -5,58 +5,53 @@ class App extends Component {
   state = {
   }
   componentDidMount() {
-    this._getMovies();
     this._callPhotoApi();
   }
-  _renderMovies = () => {
-    const movies = this.state.movies.map(movie => {
+  _renderPhotos = () => {
+    const photos = this.state.photos.map(photo => {
       return <TourList 
-        title={movie.title_english} 
-        photo={movie.medium_cover_image}
-        genres={movie.genres}
-        synopsis={movie.synopsis}
-        key={movie.id}
+        title={photo.TRIP_TITLE} 
+        //photo={"http://localhost:8080" + photo.TH_FILE_PATH_REAL_URL}
+        photo={"https://cdn.pixabay.com/photo/2015/03/12/04/43/landscape-669619_960_720.jpg"}
+        addr={photo.TRIP_ADDR_CITY_NM}
+        tagstr={photo.TRIP_TAG}
+        contents={photo.TRIP_CONTENTS}
+        key={photo.TRIP_SEQ}
         />
     })
-    return movies
+    return photos
   }
   // async 비동기
-  _getMovies = async () => {
-    const movies = await this._callApi();
+  _callPhotoApi = async () => {
+    const photos = await this._callApi();
     this.setState({
-      movies
+      photos
     });    
   }
-  _callPhotoApi = () => {  
-    fetch("http://oddmoney.iptime.org:3588/rest/photoList.do", {
-      credentials: 'include',  
-      method: 'post',
-      headers: {
-        'Content-Type': 'application/json; charset=UTF-8',
-        'Accept': 'application/json'
-      },      
-      body: {
-       "currentSn": "1",
-       "numPerPage": "10"
-      }
-     })
-     .then(response => response.json())
-     .then(json => console.log(json))
-     .catch(err => console.log(err));
-  }
-
   _callApi = () => {
-    return fetch("https://yts.am/api/v2/list_movies.json?sort_by=rating")
-    .then(response => response.json())
-    //.then(json => console.log(json))
-    .then(json => json.data.movies)
-    .catch(err => console.log(err));
+    //return fetch("http://oddmoney.iptime.org:3588/rest/photoList.do", {
+    return fetch("http://localhost:8080/rest/photoList.do", {
+        credentials: 'include',  
+        method: 'post',
+        headers: {
+          'Content-Type': 'application/json; charset=UTF-8',
+          'Accept': 'application/json'
+        },      
+        body: {
+         "currentSn": "1",
+         "numPerPage": "10"
+        }
+       })
+       .then(response => response.json())
+       //.then(json => console.log(json.resList))
+       .then(json => json.resList)
+       .catch(err => console.log(err))
   }
   render() {
-    const { movies } = this.state;
+    const { photos } = this.state;
     return (
-      <div className={movies ? "App" : "App-loading"}>
-        {movies ? this._renderMovies() : 'Loading'}
+      <div className={photos ? "App" : "App-loading"}>
+        {photos ? this._renderPhotos() : 'Loading'}
       </div>
     );
   }
